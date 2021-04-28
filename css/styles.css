@@ -67,9 +67,8 @@ p{
 
 .contact{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     color: grey;
     background-color: snow;
 }
@@ -79,26 +78,45 @@ p{
     margin-bottom: 1rem;
 }
 
-.contact p{
-    margin-right: 1.5rem;
-    margin-top: .25rem;
+.phone_contact, .email_contact{
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.phone_label, .email_label{
+    margin: 1rem 0;
 }
 
 .phone, .email{
     font-weight: 700;
-    margin-bottom: .5rem;
-    padding: 0;
-    margin-left: 0;
+    
 }
 
-#footer_nav{
+hr{
+    width: 90%;
+    text-align: center;
+    color: rgba(196, 201, 202,.2);
+    opacity: .3;
+}
+
+.footer_nav{
    display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
    flex: 1;
    justify-content: space-between;
    
 }
 
-#footer_nav p, a{
+#student_name, #linkToNav{
+    max-width: 40%;
+    margin: 1.5rem 1rem;
+   
+}
+
+.footer_nav p, a, .Medium_links{
     margin: .5rem;
     font-weight: 700;
     text-decoration: none;
@@ -107,7 +125,8 @@ p{
 } 
 
 .Medium_links{
-    display: none;
+    visibility: hidden;
+    
 }
 
 @media screen and (min-width: 768px){
@@ -174,31 +193,98 @@ p{
     }
 
     .contact{
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .contact_summary{
-        width: 60%;
-        
+        max-width: 60%;
+       
     }
+
+    .email_contact{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .phone_contact{
+        max-width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       
+    }
+
+    #student_name, .Medium_links{
+        margin: 1rem 1.5rem;
+
+    }
+    
 
     #linkToNav{
         display: none;
     }
 
-    #footer_nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+    .footer_nav{
+      
+       height: 15vh;
+       width: 100%;
     }
 
+
+
+
     .Medium_links{
-        display:contents;
+        visibility: visible;
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+        max-width: 50%;
+  
+    }
+
+   
+}
+
+@media screen and (min-width: 1024px){
+    
+    nav{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    
+    .name{
+        font-size: 1.5rem;
+        margin: 3rem 2rem;
+        font-weight: 700;
+        color: #363636;
+        /* margin: auto; */
+        
+       
+    }
+
+    .main-nav{
+        justify-content: flex-end;
         
     }
+
+    .main-nav li{
+        margin: 2rem;
+    }
+
+    .portfolio div{
+        flex: 3 30%;
+    }
+
+     header p{
+       align-self: stretch;
+       margin-top: 2rem;
+    }
+
 }
+
 
 
 
