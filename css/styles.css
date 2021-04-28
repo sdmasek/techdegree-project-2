@@ -220,6 +220,7 @@ hr{
         margin: 1rem 1.5rem;
 
     }
+
     
 
     #linkToNav{
@@ -238,9 +239,9 @@ hr{
     .Medium_links{
         visibility: visible;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         flex: 1;
-        max-width: 50%;
+        max-width: 35%;
   
     }
 
@@ -249,7 +250,12 @@ hr{
 
 @media screen and (min-width: 1024px){
     
+    body{
+        margin: 0 auto;
+    }
+
     nav{
+        padding: 25px;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
@@ -274,14 +280,40 @@ hr{
         margin: 2rem;
     }
 
-    .portfolio div{
-        flex: 3 30%;
-    }
 
      header p{
        align-self: stretch;
        margin-top: 2rem;
     }
+
+    .portfolio div{
+        flex: 3 30%;
+    }
+
+    .contact_summary{
+        max-width: 40%;
+    }
+
+    .phone_contact, .email_contact{
+        height: 3rem;
+    }
+
+    .footer_nav{
+        width: 90%;
+        height: 3rem;
+        margin: auto;
+    }
+
+    .Medium_links{
+        flex: 2;
+        max-width: 30%;
+    }
+
+    .Medium_links, #student_name{
+        padding-bottom: 1.5rem;
+    }
+
+
 
 }
 
